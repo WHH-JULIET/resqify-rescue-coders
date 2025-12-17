@@ -103,10 +103,10 @@ Permissions are **never always-on** and activate only when required.
 ## 🧒 Minor Safety Rule (STRICT)
 
 **Condition**
-``ts
+```ts
 isMinor === true &&
 relationship === "Mother"
-
+```
 
 **Enforced Behavior**
 
@@ -172,24 +172,29 @@ This ensures **uninterrupted safety for minors**.
 ```bash
 npm install
 npm run dev
+```
 
+✔ Runs with hot reload  
+✔ Mobile-friendly preview  
 
-Runs with hot reload and mobile-friendly preview.
+---
 
-🌐 Deployment
-Method	Action
-Lovable	Share → Publish
-Custom Domain	Project → Settings → Domains
-🧠 Design Philosophy
+## 🌐 Deployment
 
-“Safety should never be hidden behind bad UI.”
+| Method | Action |
+|--------|--------|
+| Lovable | Share → Publish |
+| Custom Domain | Project → Settings → Domains |
+
+---
+
+## 🧠 Design Philosophy
+
+> **“Safety should never be hidden behind bad UI.”**
 
 ResQify prioritizes:
 
-Visibility
-
-Reliability
-
-Real-world logic
-
-Zero UI confusion during emergencies
+- Visibility
+- Reliability
+- Real-world logic
+- Zero UI confusion during emergencies
