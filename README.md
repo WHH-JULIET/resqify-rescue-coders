@@ -1,108 +1,175 @@
-🛡️ ResQify — Personal Safety App
+# 🛡️ ResQify — Personal Safety App  
+**Mobile-First | Real-Time Protection | Intelligent Emergency Response**
 
-A mobile-first personal safety application built to provide real-time protection, trusted contacts, and intelligent emergency response, especially for women and minors.
-ResQify focuses on clarity, reliability, and instant action — not just UI visuals.
+ResQify is a mobile-first personal safety application built to deliver **instant emergency assistance**, **live location tracking**, and **trusted contact coordination**, with a strong focus on **women and minors**.
 
-🌟 Core Highlights
-Feature	Description
-📱 Mobile-First	Designed strictly for mobile devices
-🎨 Aura UI	Subtle character-based light aura background on all screens
-🚨 SOS Ready	One-tap emergency actions
-🗺️ Live Maps	Real-time location with filters
-🔐 Permission Control	Smart activation only when needed
-👩‍👧 Minor Protection	Locked safety rules for minors
-🎨 Global UI Rules
-Rule	Behavior
-Aura Background	Very light aura rays on every page
-Theme Based	Aura color changes with selected character
-Touch Safe	Background never blocks clicks
-Scroll Safe	All pages are fully scrollable
-Button Safety	No hidden Continue / Save / Submit buttons
+Unlike typical safety apps, ResQify prioritizes **clarity, reliability, and immediate action** — ensuring safety features are never hidden behind confusing UI.
 
-✅ All action buttons are always visible and clickable.
+---
 
-🗺️ Maps & Navigation
+## 📱 Project Overview
 
-Powered by Google Maps API using:
+| Attribute | Details |
+|--------|--------|
+| App Type | Personal Safety Application |
+| Target Users | Women, Minors, Trusted Contacts |
+| Core Focus | SOS, Live Tracking, Smart Permissions |
+| UI Principle | Zero Confusion During Emergencies |
+| License | MIT |
 
-@vis.gl/react-google-maps
+---
 
-🔍 Map Filters (Fully Functional)
-Filter	Behavior
-🚓 Police	Nearby police stations
-🏥 Hospitals	Nearby hospitals
-🛟 Safe Zones	User-defined safe places
-👥 Best Friends	Live moving friend locations
-📍 Marker Interaction
+## 🌟 Core Features
+
+| Feature | Description |
+|------|-------------|
+| 📱 Mobile-First | Designed exclusively for mobile devices |
+| 🎨 Aura UI | Subtle character-based light aura background |
+| 🚨 One-Tap SOS | Instant emergency activation |
+| 🗺️ Live Maps | Real-time location with dynamic filters |
+| 🔐 Smart Permissions | Enabled only when required |
+| 👩‍👧 Minor Safety | Locked, non-negotiable protection rules |
+
+---
+
+## 🎨 Global UI Rules
+
+| Rule | Behavior |
+|----|---------|
+| Aura Background | Light aura rays on every screen |
+| Theme-Based | Aura color adapts to selected character |
+| Touch Safe | Background never blocks interactions |
+| Scroll Safe | All pages fully scrollable |
+| Button Safety | No hidden action buttons |
+
+✅ **All action buttons are always visible and clickable**
+
+---
+
+## 🗺️ Maps & Navigation
+
+Powered by **Google Maps API** using `@vis.gl/react-google-maps`.
+
+### 🔍 Map Filters
+
+| Filter | Behavior |
+|-----|----------|
+| 🚓 Police | Nearby police stations |
+| 🏥 Hospitals | Nearby hospitals |
+| 🛟 Safe Zones | User-defined safe places |
+| 👥 Best Friends | Live moving friend locations |
+
+### 📍 Marker Interaction
 
 When a marker is tapped:
 
-Info Shown	Actions
-Place Name	📞 Call
-Type	🧭 Navigate
-Distance	—
-👥 Best Friend Mode (Critical Feature)
-State	Behavior
-🔴 OFF	Permissions inactive
-🟢 ON	All permissions enabled
-📍 Live Tracking	Continuous live location
-🧭 Map	Moving friend icon visible
+| Info | Action |
+|----|--------|
+| Place Name | 📞 Call |
+| Type | 🧭 Navigate |
+| Distance | Displayed |
 
-Only one toggle controls everything.
+---
 
-🔐 Permissions System
-Permission	Default	Activated When
-🔔 Notification	OFF	SOS / Best Friend Mode
-📞 Call	OFF	SOS / Best Friend Mode
-📍 Location	OFF	SOS / Best Friend Mode
-🎤 Audio	OFF	SOS
-🎥 Video	OFF	SOS
+## 👥 Best Friend Mode (Critical Feature)
 
-Permissions activate only when required.
+A **single toggle** that controls the entire safety system.
 
-🧒 Minor Safety Rule (STRICT)
+| State | Behavior |
+|----|---------|
+| 🔴 OFF | Permissions inactive |
+| 🟢 ON | All required permissions enabled |
+| 📍 Live Tracking | Continuous real-time location |
+| 🧭 Map | Moving friend icon visible |
 
-If:
+❗ No duplicated switches. No confusion.
 
-isMinor === true
-AND relationship === "Mother"
+---
+
+## 🔐 Permissions System
+
+Permissions are **never always-on** and activate only when required.
+
+| Permission | Default | Activated When |
+|---------|--------|----------------|
+| 🔔 Notifications | OFF | SOS / Best Friend Mode |
+| 📞 Calls | OFF | SOS / Best Friend Mode |
+| 📍 Location | OFF | SOS / Best Friend Mode |
+| 🎤 Audio | OFF | SOS |
+| 🎥 Video | OFF | SOS |
+
+---
+
+## 🧒 Minor Safety Rule (STRICT)
+
+**Condition**
+```ts
+isMinor === true &&
+relationship === "Mother"
 
 
-Then:
+**Enforced Behavior**
 
-Rule	Status
-Best Friend Mode	🟢 ON
-Toggle	🔒 Locked
-Permissions	✅ Enabled
-Live Location	📍 Always ON
-Disable Allowed	❌ Until age ≥ 18
+| Rule | Status |
+|----|--------|
+| Best Friend Mode | 🟢 Always ON |
+| Toggle | 🔒 Locked |
+| Permissions | ✅ Enabled |
+| Live Location | 📍 Always ON |
+| Disable Allowed | ❌ Until age ≥ 18 |
 
-This ensures non-negotiable safety for minors.
+This ensures **uninterrupted safety for minors**.
 
-⚙️ Settings Page (Clean Architecture)
-Feature	Placement
-Best Friend Mode	Settings (Main)
-Permissions	Settings (Main)
-Auto SOS	Separate
-Safety Check-ins	Separate
+---
 
-❌ No duplicated toggles
-❌ No confusing nested menus
+## ⚙️ Settings Architecture
 
-🚨 SOS & Emergency Flow
-Action	Behavior
-SOS Trigger	Enables permissions
-Live Location	Starts instantly
-Trusted Contacts	Notified
-Audio / Video	Activated (if enabled)
-🧱 Tech Stack
-Tech	Purpose
-⚡ Vite	Fast build tool
-⚛️ React + TypeScript	App logic
-🎨 Tailwind CSS	Styling
-🧩 shadcn-ui	UI components
-🗺️ Google Maps API	Location services
-🚀 Running Locally
+| Feature | Placement |
+|------|----------|
+| Best Friend Mode | Settings (Main) |
+| Permissions | Settings (Main) |
+| Auto SOS | Separate Section |
+| Safety Check-ins | Separate Section |
+
+❌ No duplicated toggles  
+❌ No confusing nested menus  
+
+---
+
+## 🚨 SOS & Emergency Flow
+
+| Step | Behavior |
+|----|---------|
+| SOS Triggered | Permissions enabled instantly |
+| Live Location | Starts immediately |
+| Trusted Contacts | Notified |
+| Audio / Video | Activated if enabled |
+
+⚡ Designed for **zero-delay response**
+
+---
+
+## 🧱 Tech Stack
+
+| Technology | Purpose |
+|--------|--------|
+| ⚡ Vite | Fast build & development |
+| ⚛️ React + TypeScript | Application logic |
+| 🎨 Tailwind CSS | Styling |
+| 🧩 shadcn/ui | UI components |
+| 🗺️ Google Maps API | Location services |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm or pnpm
+
+### Run Locally
+
+```bash
 npm install
 npm run dev
 
