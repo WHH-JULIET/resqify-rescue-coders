@@ -103,7 +103,7 @@ Permissions are **never always-on** and activate only when required.
 ## 🧒 Minor Safety Rule (STRICT)
 
 **Condition**
-```ts
+``ts
 isMinor === true &&
 relationship === "Mother"
 
